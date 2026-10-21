@@ -1,0 +1,34 @@
+{
+  "downloaded_utc": "2026-10-07T01:51:42.396Z",
+  "vintage": "2025-10",
+  "files": [
+    {
+      "file": "fred-md-2025-10.csv",
+      "source": "https://www.stlouisfed.org/-/media/project/frbstl/stlouisfed/research/fred-md/historical-vintages-of-fred-md-2015-01-to-2025-12.zip",
+      "archive_member": "FRED-MD_2025m10.csv",
+      "sha256": "b76d1c2edd1e50a341e683dbe6e2e3f592c041a5b24804433bab9654197bfea8",
+      "bytes": 659945
+    },
+    {
+      "file": "FRED-MD_updated_appendix.csv",
+      "source": "https://www.stlouisfed.org/-/media/project/frbstl/stlouisfed/research/fred-md/fred-md_appendix0324.zip",
+      "archive_member": "FRED-MD Appendix/FRED-MD_updated_appendix.csv",
+      "sha256": "2c445e8918c615008b6df9f96f4c2b67b8ec592cab6728b49c04dfede9980d97",
+      "bytes": 9049
+    },
+    {
+      "file": "FRED-MD_updated_appendix.pdf",
+      "source": "https://www.stlouisfed.org/-/media/project/frbstl/stlouisfed/research/fred-md/fred-md_appendix0324.zip",
+      "archive_member": "FRED-MD Appendix/FRED-MD_updated_appendix.pdf",
+      "sha256": "8394206932cf7e73d945054dcffb5687b1baf0db425bea60410b1e66dac50b7d",
+      "bytes": 131558
+    },
+    {
+      "file": "README.txt",
+      "source": "https://www.stlouisfed.org/-/media/project/frbstl/stlouisfed/research/fred-md/fred-md_appendix0324.zip",
+      "archive_member": "FRED-MD Appendix/README.txt",
+      "sha256": "2b4bc26f48ca75b3a5d7a1e022ada90da3a2a77f6db1f64cecc2dc3e388eb3fb",
+      "bytes": 739
+    }
+  ]
+}
