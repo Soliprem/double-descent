@@ -5,8 +5,10 @@ minimum-norm interpolator predict well, and which also let its coefficients be
 read for inference?
 
 ```sh
-nix develop -c env GKSwstype=100 julia --startup-file=no -t auto src/run_study.jl
-nix develop -c env GKSwstype=100 julia --startup-file=no -t auto test/runtests.jl
+nix develop
+export GKSwstype=100
+julia --startup-file=no -t auto src/run_study.jl
+julia --startup-file=no -t auto test/runtests.jl
 ```
 
 The study takes about five minutes on 24 threads and writes to

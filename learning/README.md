@@ -3,7 +3,9 @@
 Run the synthetic comparison with the Julia environment supplied by the flake:
 
 ```sh
-nix develop -c env GKSwstype=100 OPENBLAS_NUM_THREADS=1 julia --startup-file=no learning/synthetic_comparison.jl
+nix develop
+export GKSwstype=100 OPENBLAS_NUM_THREADS=1
+julia --startup-file=no learning/synthetic_comparison.jl
 ```
 
 The experiment crosses three coefficient structures with two feature designs:
