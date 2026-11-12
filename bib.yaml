@@ -1,0 +1,111 @@
+belkin2019:
+  type: article
+  title: Reconciling modern machine-learning practice and the classical bias–variance trade-off
+  author: ["Belkin, Mikhail", "Hsu, Daniel", "Ma, Siyuan", "Mandal, Soumik"]
+  date: 2019
+  page-range: 15849-15854
+  serial-number:
+    doi: 10.1073/pnas.1903070116
+  parent:
+    type: periodical
+    title: Proceedings of the National Academy of Sciences
+    volume: 116
+    issue: 32
+
+bartlett2020:
+  type: article
+  title: Benign overfitting in linear regression
+  author: ["Bartlett, Peter L.", "Long, Philip M.", "Lugosi, Gábor", "Tsigler, Alexander"]
+  date: 2020
+  page-range: 30063-30070
+  serial-number:
+    doi: 10.1073/pnas.1907378117
+  parent:
+    type: periodical
+    title: Proceedings of the National Academy of Sciences
+    volume: 117
+    issue: 48
+
+hastie2022:
+  type: article
+  title: Surprises in high-dimensional ridgeless least squares interpolation
+  author: ["Hastie, Trevor", "Montanari, Andrea", "Rosset, Saharon", "Tibshirani, Ryan J."]
+  date: 2022
+  page-range: 949-986
+  serial-number:
+    doi: 10.1214/21-AOS2133
+  parent:
+    type: periodical
+    title: The Annals of Statistics
+    volume: 50
+    issue: 2
+
+hoerl1970:
+  type: article
+  title: "Ridge regression: biased estimation for nonorthogonal problems"
+  author: ["Hoerl, Arthur E.", "Kennard, Robert W."]
+  date: 1970
+  page-range: 55-67
+  serial-number:
+    doi: 10.1080/00401706.1970.10488634
+  parent:
+    type: periodical
+    title: Technometrics
+    volume: 12
+    issue: 1
+
+tibshirani1996:
+  type: article
+  title: Regression shrinkage and selection via the lasso
+  author: ["Tibshirani, Robert"]
+  date: 1996
+  page-range: 267-288
+  serial-number:
+    doi: 10.1111/j.2517-6161.1996.tb02080.x
+  parent:
+    type: periodical
+    title: "Journal of the Royal Statistical Society: Series B (Methodological)"
+    volume: 58
+    issue: 1
+
+belloni2013:
+  type: article
+  title: Least squares after model selection in high-dimensional sparse models
+  author: ["Belloni, Alexandre", "Chernozhukov, Victor"]
+  date: 2013
+  page-range: 521-547
+  serial-number:
+    doi: 10.3150/11-BEJ410
+  parent:
+    type: periodical
+    title: Bernoulli
+    volume: 19
+    issue: 2
+
+jolliffe1982:
+  type: article
+  title: A note on the use of principal components in regression
+  author: ["Jolliffe, Ian T."]
+  date: 1982
+  page-range: 300-303
+  serial-number:
+    doi: 10.2307/2348005
+  parent:
+    type: periodical
+    title: "Journal of the Royal Statistical Society: Series C (Applied Statistics)"
+    volume: 31
+    issue: 3
+
+penrose1955:
+  type: article
+  title: A generalized inverse for matrices
+  author: ["Penrose, Roger"]
+  date: 1955
+  page-range: 406-413
+  serial-number:
+    doi: 10.1017/S0305004100030401
+  parent:
+    type: periodical
+    title: Mathematical Proceedings of the Cambridge Philosophical Society
+    volume: 51
+    issue: 3

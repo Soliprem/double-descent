@@ -19,6 +19,8 @@ const CHROME = (;
 const SIGNAL_ORDER = [(signal, signs) for signal in SIGNALS for signs in SIGN_PATTERNS]
 signal_label((signal, signs)) = "$signal\n$signs"
 level_label(value) = isinteger(value) ? Int(value) : value
+"""Spectrum label as printed on figures: `rho=0.7 K=5` becomes `ρ = 0.7, K = 5`."""
+spectrum_display(label) = replace(label, "rho=" => "ρ = ", " K=" => ", K = ")
 
 """Heatmap panel of `outcome` by spectrum and signal for one study slice, with labels."""
 function heat_panel(table, outcome; title, limits, colours, light_ink_when, show_y,
@@ -32,7 +34,7 @@ function heat_panel(table, outcome; title, limits, colours, light_ink_when, show
     cells = [cell(level, signal_and_signs)
              for level in spectrum_labels, signal_and_signs in SIGNAL_ORDER]
     xs, ys = eachindex(SIGNAL_ORDER), eachindex(spectrum_labels)
-    y_labels = show_y ? spectrum_labels : fill("", length(ys))
+    y_labels = show_y ? spectrum_display.(spectrum_labels) : fill("", length(ys))
     panel = heatmap(xs, ys, cells; clims=limits, color=colours, colorbar=false, title,
         xticks=(xs, signal_label.(SIGNAL_ORDER)), yticks=(ys, y_labels), grid=false,
         CHROME...)
@@ -102,7 +104,7 @@ function example_curve_panels(curve_summary, snr)
     examples = [
         (example("rho=0.7 K=5", :grouped, :aligned), "few factors, aligned signal"),
         (example("rho=0.7 K=5", :grouped, :contrast), "few factors, contrast signal"),
-        (example("rho=0.7 K=50", :sparse, :aligned), "many factors, scattered signal"),
+        (example("rho=0.7 K=50", :sparse, :aligned), "many factors, sparse signal"),
         (example("isotropic", :sparse, :aligned), "isotropic, sparse signal"),
     ]
     in_grid((selection, _)) = any(row -> matches(row, selection), curve_summary)
@@ -136,12 +138,14 @@ end
 
 function tradeoffs_figure(table)
     recovered = "share of the signal recovered"
-    alignment_panel = scatter_panel(table, :signal_r2; x=:signal_share,
+    # Isotropic designs have no spikes, so their share on the spikes is undefined.
+    alignment_panel = scatter_panel(filter(row -> row.rho > 0, table), :signal_r2;
+        x=:signal_share,
         xlabel="share of the signal on the spikes", ylabel=recovered,
-        title="What prediction needs")
+        title="Prediction")
     tuned_panel = scatter_panel(table, :signal_r2; x=:ridge_r2, identity_line=true,
         xlabel="tuned ridge: $recovered", ylabel="min-norm: $recovered",
-        title="What interpolation costs")
+        title="Interpolation")
     feature_panel = scatter_panel(table, :cosine; xlabel=recovered,
         ylabel="coefficient cosine", title="Individual coefficients")
     factor_panel = scatter_panel(table, :factor_cosine; xlabel=recovered,
